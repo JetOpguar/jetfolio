@@ -1,7 +1,30 @@
+// Function to scroll to the top of the page
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Show/hide the button based on scroll position
+window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.classList.add("show");
+        scrollToTopBtn.classList.remove("hide");
+    } else {
+        scrollToTopBtn.classList.add("hide");
+        scrollToTopBtn.classList.remove("show");
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const typingText = document.getElementById('typing-text');
     const prefixText = document.getElementById('prefix');
-    const words = ['Android development', 'iOS development', 'Web development']; // Add more words as needed
+    const words = ['Web Designing', 'Back-end Development', 'Web development']; // Add more words as needed
     let wordIndex = 0;
     let charIndex = 0;
     let typingTimer;

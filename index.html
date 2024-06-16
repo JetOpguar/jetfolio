@@ -8,6 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M12 2L0 14h9v8h6v-8h9z"/>
+        </svg>
+    </button>
+    
     <header>
         <div class="header-content">
             <div class="header-left">
@@ -22,7 +28,6 @@
                     <li><a href="#education" class="scroll">Education</a></li>
                     <li><a href="#skills" class="scroll">Skills</a></li>
                     <li><a href="#projects" class="scroll">Projects</a></li>
-                    <li><a href="#education" class="scroll">CV</a></li>
                     <li><a href="#contact" class="scroll">Contact</a></li>
             </ul>
         </nav>
@@ -37,65 +42,115 @@
                     <div id="specialization">
                         <h2><span id="prefix">I specialize in </span><span id="typing-text"></span></h2>
                     </div>
-                    
-                    <p>Welcome to my portfolio.</p>
                 </div>
+            </div>
+            <div class="icons">
+                <a href="#welcome"><img src="images/fb.png" alt="Facebook"></a>
+                <a href="#welcome"><img src="images/ig.png" alt="Instagram"></a>
+                <a href="#welcome"><img src="images/x1.png" alt="X"></a>
+                <a href="#welcome"><img src="images/git1.png" alt="Github"></a>
             </div>
         </section>
     
         <section id="about">
-            <h2>About Me</h2>
-            <div class="content">
-                <img src="https://via.placeholder.com/150" alt="Profile Picture">
-                <p>Hello! I'm a web developer passionate about creating interactive applications and experiences on the web. I specialize in front-end development, and I love working with the latest web technologies to build engaging and user-friendly websites.</p>
+            <h2><b>ABOUT ME</b></h2>
+            <div class="about-content">
+                <div class="about-left">
+                    <img src="images/1.jpg" alt="Profile Picture">
+                </div>
+                <div class="about-right">
+                    <br>
+                    <br>
+                    <h3>Bench Jetro Opguar</h3>
+                    <p>Hello! I'm a web developer passionate about creating interactive applications and experiences on the web. I specialize in front-end development, and I love working with the latest web technologies to build engaging and user-friendly websites.</p>
+                    <p><strong>Email:</strong> benchjetro@gmail.com</p>
+                    <p><strong>Address:</strong> Nalsian Sur, Malasiqui, Pangasinan</p>
+                    <div class="cv-download">
+                        <a href="https://drive.google.com/file/d/16ADs3EljrSpe7dsoTW2CBrTP2mwH0Ikp/view?usp=drive_link" download><button>Download CV</button></a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="education">
-            <h2>Education Background</h2>
-            <div class="education-content">
-                <div class="education-item">
-                    <h3>University Name</h3>
-                    <p>Bachelor of Science in Computer Science, 2015 - 2019</p>
+            <h2>EDUCATION BACKGROUND</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon"></div>
+                    <div class="timeline-content">
+                        <h3>Perpetual Help College of Pangasinan</h3>
+                        <p>Bachelor of Science in Information Technology<br>2020 - 2024</p>
+                    </div>
                 </div>
-                <div class="education-item">
-                    <h3>High School Name</h3>
-                    <p>High School Diploma, 2011 - 2015</p>
+                <br>
+                <br>
+                <div class="timeline-item">
+                    <div class="timeline-icon"></div>
+                    <div class="timeline-content">
+                        <h3>Perpetual Help College of Pangasinan</h3>
+                        <p>Senior High School Graduated<br>2018 - 2020</p>
+                    </div>
                 </div>
-                <!-- Add more education items as needed -->
+                <br>
+                <br>
+                <div class="timeline-item">
+                    <div class="timeline-icon"></div>
+                    <div class="timeline-content">
+                        <h3>St. Vincent Catholic Church Bayambang INC.</h3>
+                        <p>High School Graduated<br>2013 - 2018</p>
+                    </div>
+            </div>
+            <br>
+                <br>
+                <div class="timeline-item">
+                    <div class="timeline-icon"></div>
+                    <div class="timeline-content">
+                        <h3>Nalsian-Tomling Elementary School</h3>
+                        <p>Graduated<br>2007 - 2013</p>
+                    </div>
             </div>
         </section>
+        
+        
 
         <section id="skills">
-            <h2>Skills</h2>
+            <h2>SKILLS</h2>
             <div class="skills-content">
                 <div class="skill-item">
-                    <img src="html5-icon.png" alt="HTML5 Icon">
-                    <p>HTML5</p>
+                    <img src="/images/html.png" alt="HTML5 Icon">
+                
                 </div>
                 <div class="skill-item">
-                    <img src="css3-icon.png" alt="CSS3 Icon">
-                    <p>CSS3</p>
+                    <img src="images/css.png" alt="CSS3 Icon">
+                    
                 </div>
                 <div class="skill-item">
-                    <img src="js-icon.png" alt="JavaScript Icon">
-                    <p>JavaScript</p>
+                    <img src="images/js.png" alt="JavaScript Icon">
+                    
                 </div>
                 <div class="skill-item">
-                    <img src="react-icon.png" alt="React Icon">
-                    <p>React</p>
+                    <img src="images/cpp.png" alt="C++ Icon">
+                    
                 </div>
                 <div class="skill-item">
-                    <img src="nodejs-icon.png" alt="Node.js Icon">
-                    <p>Node.js</p>
+                    <img src="images/msword.png" alt="MS word Icon">
+                    
                 </div>
                 <div class="skill-item">
-                    <img src="git-icon.png" alt="Git Icon">
-                    <p>Git</p>
+                    <img src="images/php.png" alt="PHP Icon">
+                    
                 </div>
                 <div class="skill-item">
-                    <img src="responsive-design-icon.png" alt="Responsive Design Icon">
-                    <p>Responsive Design</p>
+                    <img src="images/github.png" alt="Github Icon">
+                    
+                </div>
+                <div class="skill-item">
+                    <img src="images/netlify.png" alt="Netlify Icon">
+
+                </div>
+                <div class="skill-item">
+                    <img src="images/mysql.png" alt="MySQL Icon">
+
                 </div>
                 <!-- Add more skill items as needed -->
             </div>
@@ -103,7 +158,7 @@
         
 
         <section id="projects">
-            <h2>Projects</h2>
+            <h2>PROJECTS</h2>
             <div class="project">
                 <h3>Project 1</h3>
                 <img src="https://via.placeholder.com/300x200" alt="Project 1">
@@ -118,7 +173,7 @@
         </section>
 
         <section id="contact">
-            <h2>Contact</h2>
+            <h2>CONTACT</h2>
             <form id="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>

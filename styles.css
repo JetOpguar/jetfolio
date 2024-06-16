@@ -165,26 +165,64 @@ section {
 }
 
 /* Example for #about section */
-#about .content {
+/* Adjustments for About Me section */
+#about .about-content {
     display: flex;
-    align-items: center;
-    flex-direction: column; /* Adjust as per existing layout */
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+}
+
+#about .about-left {
+    flex: 1;
+}
+
+#about .about-right {
+    flex: 2;
 }
 
 #about img {
+    width: 450px; /* Square profile picture */
+    height: 450px;
+    margin-bottom: 40px;
     border-radius: 8px;
-    margin-right: 20px;
-    max-width: 150px;
-    height: auto;
+    object-fit: cover;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#about h3 {
+    font-size: 24px;
+    margin-top: 0;
+    color: #2c3e50;
 }
 
 #about p {
     font-size: 1.1em;
     line-height: 1.6;
-    max-width: 800px;
-    text-align: left;
+    margin-bottom: 10px;
 }
+
+.cv-download {
+    margin-top: 20px;
+}
+
+.cv-download button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cv-download button:hover {
+    background-color: #1abc9c;
+    transform: translateY(-2px);
+}
+
 
 /* Example for #education section */
 #education .education-content {
@@ -217,7 +255,7 @@ section {
 }
 
 #skills .skill-item {
-    background-color: #2c3e50;
+    background-color: #2c3e5000;
     color: white;
     padding: 10px 20px;
     border-radius: 4px;
@@ -353,7 +391,7 @@ footer p {
     }
 
     #skills .skill-item {
-        background-color: #2c3e50;
+        background-color: #2c3e5000;
         color: white;
         padding: 10px 20px;
         border-radius: 4px;
@@ -488,9 +526,8 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 8px;
     background-color: #f0f0f0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -500,8 +537,7 @@ footer p {
 }
 
 .skill-item img {
-    width: 60px; /* Adjust icon size */
-    height: 60px; /* Adjust icon size */
+    width: 100px; /* Adjust icon size */
     object-fit: contain;
     margin-bottom: 10px; /* Add space between icon and text */
 }
@@ -510,4 +546,155 @@ footer p {
     margin: 0;
     font-size: 0.9em;
     color: #333;
+}
+.icons {
+    position: absolute;
+    margin-left: 60px;
+    bottom: 190px; /* Adjust distance from the bottom */
+    left: 49%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.icons a {
+    display: inline-block;
+    margin: 0 10px;
+    width: 50px; /* Adjust the width of icons */
+    height: 50px; /* Adjust the height of icons */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.icons a img {
+    width: 100%; /* Ensure image takes full width of parent container */
+    height: 100%; /* Ensure image takes full height of parent container */
+    object-fit: contain; /* Maintain aspect ratio and fit inside the dimensions */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.icons a:hover img {
+    transform: scale(1.1); /* Smooth zoom effect on hover */
+}
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 30px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-icon {
+    position: absolute;
+    top: 42%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #1abc9c;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Add a vertical line */
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 2px;
+    height: 100%;
+    background: #1abc9c;
+}
+h2 {
+    font-size: 2.4em; /* Example size, adjust as needed */
+    font-weight: bold; /* Make the font bold */
+    color: black; /* Default text color */
+    margin-bottom: 50px; /* Add spacing below the section titles */
+}
+/* Floating button styles */
+#scrollToTopBtn {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it appears above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Floating arrow-up button styles */
+#scrollToTopBtn {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it appears above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #16a085;
+    transform: scale(1.1); /* Scale up on hover for a slight animation */
+}
+
+/* SVG icon color */
+#scrollToTopBtn svg {
+    fill: white;
+    vertical-align: middle;
+}
+
+/* Show the button with opacity animation */
+#scrollToTopBtn.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Hide the button with opacity animation */
+#scrollToTopBtn.hide {
+    opacity: 0;
+    pointer-events: none; /* Disable pointer events when hidden */
 }
