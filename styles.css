@@ -550,7 +550,7 @@ footer p {
 .icons {
     position: absolute;
     margin-left: 60px;
-    bottom: 140px; /* Adjust distance from the bottom */
+    bottom: 130px; /* Adjust distance from the bottom */
     left: 49%;
     transform: translateX(-50%);
     display: flex;
