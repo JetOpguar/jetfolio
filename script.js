@@ -1,30 +1,108 @@
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let message = document.getElementById('message').value;
-
-    if (!name || !email || !message) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Please fill in all required fields!',
-        });
-    } else {
-        // Simulating form submission (replace with actual form submission code)
-        setTimeout(() => {
-            Swal.fire({
-                icon: 'success',
-                title: 'Success!',
-                text: 'Your message has been sent successfully.',
-            });
-            document.getElementById('contact-form').reset(); // Reset form after submission
-        }, 1000);
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth < 1280) {
+        // Optionally handle behavior for smaller viewports
     }
 });
 
-// Function to scroll to the top of the page
+document.addEventListener('copy', function(event) {
+    event.preventDefault(); // Prevent default copy behavior
+});
+
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault(); // Prevent default right-click behavior
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to hide the loader and show the content once loaded
+    function showContent() {
+        var loaderContainer = document.querySelector('.loader-container');
+        var body = document.querySelector('body');
+        var header = document.querySelector('header');
+        var main = document.querySelector('main');
+        var footer = document.querySelector('footer');
+
+        // Smoothly fade out the loader
+        loaderContainer.style.opacity = '0';
+        setTimeout(function() {
+            loaderContainer.style.display = 'none'; // Hide the loader after fading out
+            body.classList.add('loaded'); // Mark body as loaded to show content
+        }, 500); // Adjust timing to match your CSS transition duration
+
+        // Show the content
+        header.style.opacity = '1';
+        main.style.opacity = '1';
+        footer.style.opacity = '1';
+
+        // Restore scrolling after loader is hidden
+        body.style.overflow = 'auto';
+    }
+
+    // Simulate a delay (e.g., fetching data or loading resources)
+    setTimeout(showContent, 5000); // Loader will disappear after 5 seconds (5000 milliseconds)
+});
+
+// Highlight active section in navbar on scroll
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section[id], div[id]");
+    const navLinks = document.querySelectorAll(".header-right a");
+
+    function navHighlighter() {
+        let scrollY = window.pageYOffset;
+
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 400;
+            const sectionId = current.getAttribute("id");
+
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    if (link.getAttribute("href") === `#${sectionId}`) {
+                        link.classList.add("active");
+                    } else {
+                        link.classList.remove("active");
+                    }
+                });
+            }
+        });
+    }
+
+    navHighlighter();
+
+    window.addEventListener("scroll", navHighlighter);
+});
+
+// Form submission handling
+document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let message = document.getElementById('message').value;
+
+        if (!name || !email || !message) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please fill in all required fields!',
+            });
+        } else {
+            // Simulating form submission (replace with actual form submission code)
+            setTimeout(() => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: 'Your message has been sent successfully.',
+                });
+                contactForm.reset();
+            }, 1000);
+        }
+    });
+});
+
+// Smooth scroll to top function
 function scrollToTop() {
     window.scrollTo({
         top: 0,
@@ -32,24 +110,16 @@ function scrollToTop() {
     });
 }
 
-// Show/hide the button based on scroll position
-window.onscroll = function() { scrollFunction() };
-
-function scrollFunction() {
+// Show/hide scroll-to-top button based on scroll position
+window.addEventListener('scroll', function() {
     var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    scrollToTopBtn.classList.toggle("show", window.scrollY > 20);
+    scrollToTopBtn.classList.toggle("hide", window.scrollY <= 20);
+});
 
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopBtn.classList.add("show");
-        scrollToTopBtn.classList.remove("hide");
-    } else {
-        scrollToTopBtn.classList.add("hide");
-        scrollToTopBtn.classList.remove("show");
-    }
-}
-
+// Typing animation initialization
 document.addEventListener('DOMContentLoaded', function () {
     const typingText = document.getElementById('typing-text');
-    const prefixText = document.getElementById('prefix');
     const words = ['Web Designing', 'Back-end Development', 'Web development']; // Add more words as needed
     let wordIndex = 0;
     let charIndex = 0;
@@ -76,25 +146,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Initialize typing animation on page load
     type();
 });
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
 
-    console.log(`Name: ${name}`);
-    console.log(`Email: ${email}`);
-    console.log(`Message: ${message}`);
-
-    alert('Thank you for your message!');
-    
-    document.getElementById('contact-form').reset();
-});
-document.addEventListener("DOMContentLoaded", function() {
+// Smooth scroll to section on navbar link click
+document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll("nav ul li a");
 
     navLinks.forEach(function(navLink) {
@@ -103,11 +159,9 @@ document.addEventListener("DOMContentLoaded", function() {
             const targetId = navLink.getAttribute("href").substring(1); // Get the target section id
             const targetSection = document.getElementById(targetId);
             if (targetSection) {
-                // Calculate the offset to account for header height and padding
                 const headerHeight = document.querySelector("header").offsetHeight;
                 const sectionTop = targetSection.getBoundingClientRect().top + window.scrollY - headerHeight;
 
-                // Scroll to the adjusted position
                 window.scrollTo({
                     top: sectionTop,
                     behavior: "smooth"
@@ -116,5 +170,3 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
-

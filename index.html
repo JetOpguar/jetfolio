@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1280">
     <title>Portfolio | Jetro Opguar</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/dt.png" type="image/png">
+    <link rel="shortcut icon" href="images/dt.png" type="image/png">
 </head>
 <body>
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
     <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
             <path fill="currentColor" d="M12 2L0 14h9v8h6v-8h9z"/>
         </svg>
     </button>
-    
     <header>
         <div class="header-content">
             <div class="header-left">
@@ -45,10 +49,10 @@
                 </div>
             </div>
             <div class="icons">
-                <a href="#welcome"><img src="images/fb.png" alt="Facebook"></a>
-                <a href="#welcome"><img src="images/ig.png" alt="Instagram"></a>
-                <a href="#welcome"><img src="images/x1.png" alt="X"></a>
-                <a href="#welcome"><img src="images/git1.png" alt="Github"></a>
+                <a href="https://www.facebook.com/jetopguar" target="_blank"><img src="images/fb.png" alt="Facebook"></a>
+                <a href="https://Instagram.com"target="_blank"><img src="images/ig.png" alt="Instagram"></a>
+                <a href="https://twitter.com"target="_blank"><img src="images/x1.png" alt="X"></a>
+                <a href="https://github.com/JetOpguar"target="_blank"><img src="images/git1.png" alt="Github"></a>
             </div>
         </section>
     
@@ -195,10 +199,10 @@
                 <!-- Add more projects as needed -->
             </div>
             <br>
-
+<br>
         </section>
         
-        
+        <br>
         <div id="contacts" class="contacts">
         <div class="contacts">
             <div class="form-container">
@@ -214,11 +218,6 @@
                     <div class="right-inner-container">
                         <form id="contact-form" netlify>
                             <h1 style="font-size: 2.2em" class="lg-view">Contact</h1>
-                            <div class="social-container">
-                                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
                             <label for="email">Email</label>
