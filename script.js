@@ -1,3 +1,29 @@
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('message').value;
+
+    if (!name || !email || !message) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please fill in all required fields!',
+        });
+    } else {
+        // Simulating form submission (replace with actual form submission code)
+        setTimeout(() => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: 'Your message has been sent successfully.',
+            });
+            document.getElementById('contact-form').reset(); // Reset form after submission
+        }, 1000);
+    }
+});
+
 // Function to scroll to the top of the page
 function scrollToTop() {
     window.scrollTo({
