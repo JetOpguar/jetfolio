@@ -10,8 +10,7 @@ body {
     /* WebKit browsers (e.g., Safari) */
     -webkit-touch-callout: none;
     /* Disable callout on long-press (iOS Safari) */
-    overflow-y: auto; /* Enables vertical scrolling */
-    overflow-x: hidden; /* Hides horizontal scrollbar */
+    
 }
 
 /* Optional: Disable dragging of images */
@@ -966,12 +965,6 @@ label {
         padding: 8px 10px; /* Adjust padding around links */
         font-size: 14px; /* Adjust font size */
     }
-
-
-    
-/* Media query for Android devices */
-/* Media query for Android devices */
-@media only screen and (max-width: 720px) {
     #about .about-content {
         flex-direction: column;
         align-items: center;
@@ -1104,17 +1097,10 @@ label {
         width: 30px;
         height: 30px;
     }
-
-    /* Additional adjustments as needed */
-
-       }
-       @media (max-width: 768px) {
         .intro img {
             width: 380px; /* Increase width */
             height: 380px; /* Increase height */
         }
-    }
-    @media (max-width: 768px) {
         #projects {
             padding: 10px; /* Adjust padding */
         }
@@ -1130,5 +1116,5 @@ label {
             height: auto;
             margin: 10px 0; /* Adjust margin */
         }
-    }
+    
     
