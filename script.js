@@ -1,12 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    if (window.innerWidth < 1280) {
-        // Optionally handle behavior for smaller viewports
-    }
-});
-
-document.addEventListener('copy', function(event) {
-    event.preventDefault(); // Prevent default copy behavior
-});
 
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault(); // Prevent default right-click behavior
@@ -38,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Simulate a delay (e.g., fetching data or loading resources)
-    setTimeout(showContent, 5000); // Loader will disappear after 5 seconds (5000 milliseconds)
+    setTimeout(showContent, 7000); // Loader will disappear after 5 seconds (5000 milliseconds)
 });
 
 // Highlight active section in navbar on scroll

@@ -1,61 +1,135 @@
 /* Disable text selection and dragging */
 body {
-    user-select: none; /* Prevent text selection */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    -webkit-user-select: none; /* WebKit browsers (e.g., Safari) */
-    -webkit-touch-callout: none; /* Disable callout on long-press (iOS Safari) */
-    touch-action: none; /* Disable default touch behaviors */
+    user-select: none;
+    /* Prevent text selection */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    -webkit-user-select: none;
+    /* WebKit browsers (e.g., Safari) */
+    -webkit-touch-callout: none;
+    /* Disable callout on long-press (iOS Safari) */
+    touch-action: none;
+    /* Disable default touch behaviors */
 }
 
 /* Optional: Disable dragging of images */
 img {
-    pointer-events: none; /* Disable pointer events on images */
+    pointer-events: none;
+    /* Disable pointer events on images */
 }
 
 /* Loader styles */
 .loader-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    background-color: rgb(255, 255, 255); /* Semi-transparent background */
+    height: 100vh;
+    /* Full viewport height */
+    background-color: rgb(255, 255, 255);
+    /* Semi-transparent background */
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 9999; /* Ensure it's on top */
-    opacity: 1; /* Initially fully visible */
-    transition: opacity 0.5s ease; /* Smooth opacity transition */
+    z-index: 9999;
+    /* Ensure it's on top */
+    opacity: 1;
+    /* Initially fully visible */
+    transition: opacity 0.5s ease;
+    /* Smooth opacity transition */
+}
+
+.loader-container.hidden {
+    opacity: 0;
+    /* Fade out */
+    pointer-events: none;
+    /* Disable interactions when hidden */
 }
 
 .loader {
-    border: 8px solid #3498db; /* Blue color */
+    border: 8px solid #2c3e50;
+    /* Blue color */
     border-radius: 50%;
-    border-top: 8px solid rgba(0, 0, 0, 0.3); /* Transparent top border */
+    border-top: 8px solid rgba(0, 0, 0, 0.3);
+    /* Transparent top border */
     width: 60px;
     height: 60px;
     animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    margin-top: 1px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.1em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.best-viewed {
+    margin-top: 1px;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.best-viewed {
+    font-size: 1em;
+    color: #666;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Hide content until loaded */
 body {
-    overflow: hidden; /* Prevent scrolling while loader is shown */
+    overflow: hidden;
+    /* Prevent scrolling while loader is shown */
 }
 
 body.loaded {
-    overflow: auto; /* Restore scrolling once content is loaded */
+    overflow: auto;
+    /* Restore scrolling once content is loaded */
 }
 
-header, main, footer {
-    opacity: 0; /* Initially hide main sections */
-    transition: opacity 0.5s ease; /* Smooth opacity transition */
+header,
+main,
+footer {
+    opacity: 0;
+    /* Initially hide main sections */
+    transition: opacity 0.5s ease;
+    /* Smooth opacity transition */
 }
 
 html {
@@ -74,19 +148,26 @@ body {
     background: #f3f4f6;
     color: #333;
 }
+
 a {
-    text-decoration: none; /* Remove underline */
-    color: white; /* Set text color to white */
-    cursor: pointer; /* Change cursor to pointer on hover (optional) */
+    text-decoration: none;
+    /* Remove underline */
+    color: white;
+    /* Set text color to white */
+    cursor: pointer;
+    /* Change cursor to pointer on hover (optional) */
 }
 
 /* Change link color on hover (optional) */
 a:hover {
     color: lightgray;
 }
+
 .highlight {
-    color: #ffffff00; /* Your desired color for highlighted text */
+    color: #ffffff00;
+    /* Your desired color for highlighted text */
 }
+
 header {
     background-color: #2c3e50;
     color: white;
@@ -95,9 +176,12 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     top: 0;
-    position: fixed; /* Fixed position to stay at the top */
-    z-index: 1000; /* Ensure the header is above other content */
+    position: fixed;
+    /* Fixed position to stay at the top */
+    z-index: 1000;
+    /* Ensure the header is above other content */
 }
+
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -108,13 +192,15 @@ header {
 }
 
 .header-left {
-    flex: 1; /* Takes up all available space in the flex container */
+    flex: 1;
+    /* Takes up all available space in the flex container */
     text-align: left;
 }
 
 .header-right {
     text-align: right;
 }
+
 .header-right ul {
     list-style-type: none;
     margin: 0;
@@ -135,23 +221,29 @@ header {
 }
 
 .header-right a.active {
-    color: #1abc9c; /* Adjust the active link color */
+    color: #1abc9c;
+    /* Adjust the active link color */
 }
 
 .header-right a.active::after {
     content: '';
     position: absolute;
-    bottom: -3px; /* Adjust the underline position */
+    bottom: -3px;
+    /* Adjust the underline position */
     left: 0;
     width: 100%;
-    height: 2px; /* Adjust the underline thickness */
-    background-color: white; /* Adjust the underline color */
+    height: 2px;
+    /* Adjust the underline thickness */
+    background-color: white;
+    /* Adjust the underline color */
     transition: all 0.3s ease-in-out;
 }
 
 .header-right a:hover::after {
-    width: 80%; /* Adjust the underline width on hover */
-    margin: 0 auto; /* Center the underline on hover */
+    width: 80%;
+    /* Adjust the underline width on hover */
+    margin: 0 auto;
+    /* Center the underline on hover */
 }
 
 
@@ -163,12 +255,15 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block; /* Display list items horizontally */
-    margin-left: 20px; /* Add spacing between list items */
+    display: inline-block;
+    /* Display list items horizontally */
+    margin-left: 20px;
+    /* Add spacing between list items */
 }
 
 nav ul li:first-child {
-    margin-left: 0; /* No margin on the first list item */
+    margin-left: 0;
+    /* No margin on the first list item */
 }
 
 nav ul li a {
@@ -187,7 +282,8 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 60px 20px;
-    min-height: 100vh; /* Ensure main fills the entire viewport height */
+    min-height: 100vh;
+    /* Ensure main fills the entire viewport height */
     display: flex;
     flex-direction: column;
 }
@@ -199,10 +295,12 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: center;
-    min-height: 70vh; /* Ensure each section fills the entire viewport height */
+    min-height: 70vh;
+    /* Ensure each section fills the entire viewport height */
     display: flex;
     flex-direction: column;
 }
+
 #specialization {
     text-align: left;
 }
@@ -210,17 +308,20 @@ section {
 #specialization h2 {
     margin-top: -1%;
     font-size: 1.5em;
-    color: #333; /* Default text color */
+    color: #333;
+    /* Default text color */
 }
 
 #specialization #typing-text {
     display: inline-block;
-    color: #1abc9c; /* Color for the typing effect text */
+    color: #1abc9c;
+    /* Color for the typing effect text */
     font-weight: bold;
 }
 
 #specialization #prefix {
-    color: #555; /* Color for the prefix text */
+    color: #555;
+    /* Color for the prefix text */
 }
 
 /* Home section */
@@ -280,7 +381,8 @@ section {
 }
 
 #about img {
-    width: 450px; /* Square profile picture */
+    width: 450px;
+    /* Square profile picture */
     height: 450px;
     margin-bottom: 40px;
     border-radius: 8px;
@@ -359,12 +461,14 @@ section {
     font-size: 1em;
     margin: 5px;
 }
+
 form label {
     display: block;
     margin: 15px 0 5px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 10px;
     margin: 5px 0 20px;
@@ -396,7 +500,8 @@ footer {
     text-align: center;
     padding: 20px 0;
     width: 100%;
-    margin-top: 40px; /* Adds spacing between the content and footer */
+    margin-top: 40px;
+    /* Adds spacing between the content and footer */
 }
 
 footer p {
@@ -413,18 +518,22 @@ footer p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Adjust spacing between skill items */
-    margin-top: 20px; /* Add margin between Skills section and previous section */
+    gap: 20px;
+    /* Adjust spacing between skill items */
+    margin-top: 20px;
+    /* Add margin between Skills section and previous section */
 }
 
 .skill-item {
-    width: 120px; /* Adjust width of each skill item as needed */
-    height: 180px; /* Adjust height of each skill item as needed */
+    width: 120px;
+    /* Adjust width of each skill item as needed */
+    height: 180px;
+    /* Adjust height of each skill item as needed */
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f0f0f0;
-   
+
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -434,9 +543,11 @@ footer p {
 }
 
 .skill-item img {
-    width: 100px; /* Adjust icon size */
+    width: 100px;
+    /* Adjust icon size */
     object-fit: contain;
-    margin-bottom: 10px; /* Add space between icon and text */
+    margin-bottom: 10px;
+    /* Add space between icon and text */
 }
 
 .skill-item p {
@@ -444,11 +555,13 @@ footer p {
     font-size: 0.9em;
     color: #333;
 }
+
 .icons {
     position: absolute;
     margin-left: 60px;
-    bottom: 110px; /* Adjust distance from the bottom */
-    left: 47.5%;
+    bottom: 110px;
+    /* Adjust distance from the bottom */
+    left: 52%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
@@ -459,22 +572,31 @@ footer p {
 .icons a {
     display: inline-block;
     margin: 0 10px;
-    width: 40px; /* Adjust the width of icons */
-    height: 40px; /* Adjust the height of icons */
-    transition: transform 0.3s ease; /* Smooth transition effect */
+    width: 40px;
+    /* Adjust the width of icons */
+    height: 40px;
+    /* Adjust the height of icons */
+    transition: transform 0.3s ease;
+    /* Smooth transition effect */
 }
 
 .icons a img {
-    width: 100%; /* Ensure image takes full width of parent container */
-    height: 100%; /* Ensure image takes full height of parent container */
-    object-fit: contain; /* Maintain aspect ratio and fit inside the dimensions */
+    width: 100%;
+    /* Ensure image takes full width of parent container */
+    height: 100%;
+    /* Ensure image takes full height of parent container */
+    object-fit: contain;
+    /* Maintain aspect ratio and fit inside the dimensions */
     cursor: pointer;
-    transition: transform 0.3s ease; /* Smooth transition effect */
+    transition: transform 0.3s ease;
+    /* Smooth transition effect */
 }
 
 .icons a:hover img {
-    transform: scale(1.1); /* Smooth zoom effect on hover */
+    transform: scale(1.1);
+    /* Smooth zoom effect on hover */
 }
+
 /* Timeline Styles */
 .timeline {
     position: relative;
@@ -532,15 +654,22 @@ footer p {
     height: 100%;
     background: #1abc9c;
 }
+
 h2 {
-    font-size: 2.4em; /* Example size, adjust as needed */
-    font-weight: bold; /* Make the font bold */
-    color: black; /* Default text color */
-    margin-bottom: 50px; /* Add spacing below the section titles */
+    font-size: 2.4em;
+    /* Example size, adjust as needed */
+    font-weight: bold;
+    /* Make the font bold */
+    color: black;
+    /* Default text color */
+    margin-bottom: 50px;
+    /* Add spacing below the section titles */
 }
+
 /* Floating button styles */
 #scrollToTopBtn {
-    display: none; /* Initially hidden */
+    display: none;
+    /* Initially hidden */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -551,13 +680,15 @@ h2 {
     padding: 15px;
     font-size: 1.2em;
     cursor: pointer;
-    z-index: 1000; /* Ensure it appears above other content */
+    z-index: 1000;
+    /* Ensure it appears above other content */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Floating arrow-up button styles */
 #scrollToTopBtn {
-    display: none; /* Initially hidden */
+    display: none;
+    /* Initially hidden */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -568,14 +699,16 @@ h2 {
     padding: 15px;
     font-size: 1.2em;
     cursor: pointer;
-    z-index: 1000; /* Ensure it appears above other content */
+    z-index: 1000;
+    /* Ensure it appears above other content */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: opacity 0.3s, transform 0.3s;
 }
 
 #scrollToTopBtn:hover {
     background-color: #16a085;
-    transform: scale(1.1); /* Scale up on hover for a slight animation */
+    transform: scale(1.1);
+    /* Scale up on hover for a slight animation */
 }
 
 /* SVG icon color */
@@ -593,62 +726,83 @@ h2 {
 /* Hide the button with opacity animation */
 #scrollToTopBtn.hide {
     opacity: 0;
-    pointer-events: none; /* Disable pointer events when hidden */
+    pointer-events: none;
+    /* Disable pointer events when hidden */
 }
+
 /* Styles for Projects Section */
 #projects {
     text-align: center;
     padding: 20px;
-    background-color: #ffffff; /* Light background color for the section */
+    background-color: #ffffff;
+    /* Light background color for the section */
     margin-top: 20px;
 }
 
 #projects h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #333; /* Darker color for the heading */
+    color: #333;
+    /* Darker color for the heading */
 }
 
 .projects-container {
     display: flex;
-    flex-wrap: wrap; /* Wrap items to next line if needed */
-    justify-content: space-around; /* Adjust spacing between project items */
-    max-width: 1200px; /* Limit the maximum width of the container */
-    margin: 0 auto; /* Center align the container */
+    flex-wrap: wrap;
+    /* Wrap items to next line if needed */
+    justify-content: space-around;
+    /* Adjust spacing between project items */
+    max-width: 1200px;
+    /* Limit the maximum width of the container */
+    margin: 0 auto;
+    /* Center align the container */
 }
 
 .project {
-    background-color:#2c3e50;; /* White background for each project */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #2c3e50;
+    ;
+    /* White background for each project */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
     padding: 15px;
-    text-align: left; /* Left align text inside projects */
-    transition: transform 0.2s; /* Smooth transition for hover effect */
-    width: calc(33.33% - 20px); /* 33.33% width for each project, with margin */
-    margin: 10px; /* Space between projects */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: left;
+    /* Left align text inside projects */
+    transition: transform 0.2s;
+    /* Smooth transition for hover effect */
+    width: calc(33.33% - 20px);
+    /* 33.33% width for each project, with margin */
+    margin: 10px;
+    /* Space between projects */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
 }
 
 .project:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
+    transform: translateY(-5px);
+    /* Lift effect on hover */
 }
 
 .project h3 {
     font-size: 1.5em;
-    color: #f2f6fa; /* Blue color for project titles */
+    color: #f2f6fa;
+    /* Blue color for project titles */
     margin-bottom: 10px;
 }
 
 .project img {
     width: 100%;
     height: auto;
-    border-radius: 5px; /* Rounded corners for images */
+    border-radius: 5px;
+    /* Rounded corners for images */
     margin-bottom: 10px;
 }
 
 .project p {
     font-size: 1em;
-    color: #eeeeee; /* Grey color for project descriptions */
+    color: #eeeeee;
+    /* Grey color for project descriptions */
 }
 
 
@@ -657,31 +811,41 @@ h2 {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #f0f0f0;
+    /* Light gray background */
 
 }
 
 /* Container for the form and its content */
 .form-container {
     display: flex;
-    max-width: 1120px; /* Limit width of the form container */
-    background-color: #fff; /* White background */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* Hide overflow if any */
+    max-width: 1120px;
+    /* Limit width of the form container */
+    background-color: #fff;
+    /* White background */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+    border-radius: 8px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Hide overflow if any */
 }
 
 /* Left section container */
 .left-container {
-    flex: 1; /* Take up remaining space */
+    flex: 1;
+    /* Take up remaining space */
     padding: 40px;
-    background-color: #2c3e50; /* Green background */
-    color: #fff; /* White text color */
+    background-color: #2c3e50;
+    /* Green background */
+    color: #fff;
+    /* White text color */
 }
 
 /* Right section container */
 .right-container {
-    flex: 2; /* Take up more space than left */
+    flex: 2;
+    /* Take up more space than left */
     padding: 40px;
 }
 
@@ -711,7 +875,8 @@ p {
 .social {
     display: inline-block;
     margin-right: 10px;
-    color: #121f4b; /* Green color for icons */
+    color: #121f4b;
+    /* Green color for icons */
     font-size: 20px;
 }
 
@@ -723,20 +888,24 @@ textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ddd; /* Light gray border */
+    border: 1px solid #ddd;
+    /* Light gray border */
     border-radius: 4px;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
 }
 
 textarea {
-    resize: vertical; /* Allow vertical resizing of textarea */
+    resize: vertical;
+    /* Allow vertical resizing of textarea */
 }
 
 /* Submit button */
 button {
-    background-color: #2c3e50; /* Green background */
-    color: #fff; /* White text color */
+    background-color: #2c3e50;
+    /* Green background */
+    color: #fff;
+    /* White text color */
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -745,10 +914,221 @@ button {
 }
 
 button:hover {
-    background-color: #5a5454; /* Darker green on hover */
+    background-color: #5a5454;
+    /* Darker green on hover */
 }
 
 /* Responsive adjustments */
-textarea, button, label {
+textarea,
+button,
+label {
     font-family: 'Poppins', sans-serif;
 }
+/* Media query for Android browsers */
+@media only screen and (max-width: 1280px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape),
+       only screen and (max-width: 768px) {
+    /* Adjustments for header */
+
+    .header {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text within .header */
+    }
+
+    .header-content {
+        justify-content: center; /* Center content vertically */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .header-left {
+        margin-bottom: 10px; /* Adjust spacing below header */
+    }
+
+    .header-left h1 {
+        margin: 0; /* Remove default margin from h1 */
+    }
+
+    .header-right {
+        margin-top: -35px; /* Adjust spacing above navigation */
+    }
+
+    .header-right ul {
+        flex-direction: column; /* Stack list items vertically */
+        align-items: center; /* Center items horizontally */
+        padding-left: 0; /* Remove default padding */
+    }
+
+    .header-right li {
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    .header-right a {
+        padding: 8px 10px; /* Adjust padding around links */
+        font-size: 14px; /* Adjust font size */
+    }
+
+
+    
+/* Media query for Android devices */
+/* Media query for Android devices */
+@media only screen and (max-width: 720px) {
+    #about .about-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reduce the gap between text and picture */
+        text-align: center;
+    }
+
+    #about .about-left {
+        margin-bottom: -75px; /* Adjust spacing between image and text */
+    }
+
+    #about img {
+        width: 350px; /* Set fixed width for square shape */
+        height: 350px; /* Set fixed height for square shape */
+        margin-top: 0px; /* Space between text and image */
+        border-radius: 8px; /* Keep rounded corners */
+        object-fit: cover;
+        box-shadow: 0 4px 6px rgba(24, 23, 23, 0.171);
+        border: 4px solid #fff; /* Add a minimalistic border */
+    }
+
+    #about .about-right {
+        text-align: center;
+    }
+
+    #about h3 {
+        font-size: 20px; /* Decrease heading size for better readability */
+        margin-bottom: 5px; /* Adjust spacing below the heading */
+        color: #2c3e50; /* Ensure text color is defined */
+    }
+
+    #about p {
+        font-size: 0.9em; /* Adjust paragraph font size */
+        line-height: 1.5;
+        margin-bottom: 10px;
+        color: #555; /* Ensure text color is defined */
+    }
+
+    .cv-download {
+        margin-top: 15px; /* Adjust margin above the download button */
+    }
+
+    .cv-download button {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 0.9em; /* Decrease button font size */
+        background-color: #2c3e50; /* Button background color */
+        color: #fff; /* Button text color */
+        border: none; /* Remove button border */
+        border-radius: 4px; /* Add button border radius */
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .cv-download button:hover {
+        background-color: #1abc9c; /* Hover background color */
+        transform: translateY(-2px);
+    }
+}
+
+    .header-right ul {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-right li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Adjustments for main sections */
+    main {
+        padding: 40px 10px;
+    }
+
+    section {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    /* Adjustments for intro section */
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+
+    .intro-text h1 {
+        font-size: 2em;
+    }
+
+    /* Adjustments for skills section */
+    #skills .skills-content {
+        justify-content: center;
+    }
+
+    .skill-item {
+        width: 100px;
+        height: 140px;
+    }
+
+    .skill-item img {
+        width: 60px;
+    }
+
+    .skill-item p {
+        font-size: 0.8em;
+    }
+
+    /* Adjustments for icons section */
+    .icons {
+        position: static;
+        margin: 20px 0;
+        justify-content: center;
+        bottom: auto;
+        left: auto;
+        transform: none;
+    }
+
+    .icons a {
+        margin: 0 5px;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Additional adjustments as needed */
+
+       }
+       @media (max-width: 768px) {
+        .intro img {
+            width: 380px; /* Increase width */
+            height: 380px; /* Increase height */
+        }
+    }
+    @media (max-width: 768px) {
+        #projects {
+            padding: 10px; /* Adjust padding */
+        }
+    
+        .projects-container {
+            justify-content: center; /* Center align projects */
+            flex-direction: column; /* Stack projects vertically */
+            align-items: center; /* Center align items */
+        }
+    
+        .project {
+            width: 450px;
+            height: auto;
+            margin: 10px 0; /* Adjust margin */
+        }
+    }
+    
