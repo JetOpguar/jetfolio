@@ -1,7 +1,4 @@
 
-document.addEventListener('contextmenu', function(event) {
-    event.preventDefault(); // Prevent default right-click behavior
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     // Function to hide the loader and show the content once loaded

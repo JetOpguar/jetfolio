@@ -927,7 +927,6 @@ label {
 @media only screen and (max-width: 1280px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape),
        only screen and (max-width: 768px) {
     /* Adjustments for header */
-
     .header {
         flex-direction: column;
         align-items: center; /* Center items horizontally */
@@ -965,6 +964,98 @@ label {
         padding: 8px 10px; /* Adjust padding around links */
         font-size: 14px; /* Adjust font size */
     }
+
+    /* Adjustments for main sections */
+    main {
+        padding: 40px 10px;
+    }
+
+    section:not(#home) {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    /* Adjustments for intro section */
+    .intro {
+        flex-direction: column;
+        margin-top: 210px;
+    }
+
+    .intro img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+
+    .intro-text h1 {
+        font-size: 2em;
+    }
+    #specialization {
+        text-align: left;
+    }
+    
+    #specialization h2 {
+        margin-left: 50px;
+        margin-top: -1%;
+        font-size: 1em;
+        color: #333;
+        /* Default text color */
+    }
+    
+    #specialization #typing-text {
+        display: inline-block;
+        color: #1abc9c;
+        /* Color for the typing effect text */
+        font-weight: bold;
+    }
+    
+    #specialization #prefix {
+        color: #555;
+        /* Color for the prefix text */
+    }    
+    
+
+    /* Adjustments for skills section */
+    #skills .skills-content {
+        justify-content: center;
+    }
+
+    .skill-item {
+        width: 100px;
+        height: 140px;
+    }
+
+    .skill-item img {
+        width: 60px;
+    }
+
+    .skill-item p {
+        font-size: 0.8em;
+    }
+
+    /* Adjustments for icons section */
+    .icons {
+        position: static;
+        margin: 20px 0;
+        justify-content: center;
+        bottom: auto;
+        left: auto;
+        transform: none;
+    }
+
+    .icons a {
+        margin: 0 5px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Media query for Android devices */
+@media only screen and (max-width: 720px) {
     #about .about-content {
         flex-direction: column;
         align-items: center;
@@ -1022,99 +1113,25 @@ label {
         background-color: #1abc9c; /* Hover background color */
         transform: translateY(-2px);
     }
-}
-
-    .header-right ul {
-        flex-direction: row;
-        align-items: center;
-        text-align: center;
-    }
-
-    .header-right li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    /* Adjustments for main sections */
-    main {
-        padding: 40px 10px;
-    }
-
-    section {
-        margin: 20px 10px;
-        padding: 20px;
-    }
-
-    /* Adjustments for intro section */
-    .intro {
-        flex-direction: column;
-    }
 
     .intro img {
-        width: 250px;
-        height: 250px;
-        margin-bottom: 20px;
+        width: 380px; /* Increase width */
+        height: 380px; /* Increase height */
     }
 
-    .intro-text {
-        text-align: center;
+    #projects {
+        padding: 10px; /* Adjust padding */
     }
 
-    .intro-text h1 {
-        font-size: 2em;
+    .projects-container {
+        justify-content: center; /* Center align projects */
+        flex-direction: column; /* Stack projects vertically */
+        align-items: center; /* Center align items */
     }
 
-    /* Adjustments for skills section */
-    #skills .skills-content {
-        justify-content: center;
+    .project {
+        width: 450px;
+        height: auto;
+        margin: 10px 0; /* Adjust margin */
     }
-
-    .skill-item {
-        width: 100px;
-        height: 140px;
-    }
-
-    .skill-item img {
-        width: 60px;
-    }
-
-    .skill-item p {
-        font-size: 0.8em;
-    }
-
-    /* Adjustments for icons section */
-    .icons {
-        position: static;
-        margin: 20px 0;
-        justify-content: center;
-        bottom: auto;
-        left: auto;
-        transform: none;
-    }
-
-    .icons a {
-        margin: 0 5px;
-        width: 30px;
-        height: 30px;
-    }
-        .intro img {
-            width: 380px; /* Increase width */
-            height: 380px; /* Increase height */
-        }
-        #projects {
-            padding: 10px; /* Adjust padding */
-        }
-    
-        .projects-container {
-            justify-content: center; /* Center align projects */
-            flex-direction: column; /* Stack projects vertically */
-            align-items: center; /* Center align items */
-        }
-    
-        .project {
-            width: 450px;
-            height: auto;
-            margin: 10px 0; /* Adjust margin */
-        }
-    
-    
+}
