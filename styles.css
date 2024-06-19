@@ -10,8 +10,6 @@ body {
     /* WebKit browsers (e.g., Safari) */
     -webkit-touch-callout: none;
     /* Disable callout on long-press (iOS Safari) */
-    touch-action: none;
-    /* Disable default touch behaviors */
 }
 
 /* Optional: Disable dragging of images */
