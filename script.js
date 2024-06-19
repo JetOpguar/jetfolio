@@ -1,32 +1,31 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to hide the loader and show the content once loaded
+    function showContent() {
+        var loaderContainer = document.querySelector('.loader-container');
+        var body = document.querySelector('body');
+        var header = document.querySelector('header');
+        var main = document.querySelector('main');
+        var footer = document.querySelector('footer');
 
-document.addEventListener('contextmenu', function(event) {
-    event.preventDefault(); // Prevent default right-click behavior
+        // Smoothly fade out the loader
+        loaderContainer.style.opacity = '0';
+        setTimeout(function() {
+            loaderContainer.style.display = 'none'; // Hide the loader after fading out
+            body.classList.add('loaded'); // Mark body as loaded to show content
+        }, 500); // Adjust timing to match your CSS transition duration
+
+        // Show the content
+        header.style.opacity = '1';
+        main.style.opacity = '1';
+        footer.style.opacity = '1';
+
+        // Restore scrolling after loader is hidden
+        body.style.overflow = 'auto';
+    }
+
+    // Simulate a delay (e.g., fetching data or loading resources)
+    setTimeout(showContent, 7000); // Loader will disappear after 5 seconds (5000 milliseconds)
 });
-
-function showContent() {
-    var loaderContainer = document.querySelector('.loader-container');
-    var body = document.querySelector('body');
-    var header = document.querySelector('header');
-    var main = document.querySelector('main');
-    var footer = document.querySelector('footer');
-
-    // Smoothly fade out the loader
-    loaderContainer.style.opacity = '0';
-    setTimeout(function() {
-        loaderContainer.style.display = 'none'; // Hide the loader after fading out
-        body.classList.add('loaded'); // Mark body as loaded to show content
-    }, 500); // Adjust timing to match your CSS transition duration
-
-    // Show the content
-    header.style.opacity = '1';
-    main.style.opacity = '1';
-    footer.style.opacity = '1';
-
-    // Restore scrolling after loader is hidden
-    document.documentElement.style.overflow = 'auto';  // For older browsers
-    document.body.style.overflow = 'auto';  // For modern browsers
-}
-
 
 // Highlight active section in navbar on scroll
 document.addEventListener("DOMContentLoaded", function() {
