@@ -1003,9 +1003,9 @@ body {
     }
     
     #specialization h2 {
-        margin-left: 50px;
+        margin-left: 30px;
         margin-top: -1%;
-        font-size: 1em;
+        font-size: 0.9em;
         color: #333;
         /* Default text color */
     }
