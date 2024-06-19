@@ -10,6 +10,8 @@ body {
     /* WebKit browsers (e.g., Safari) */
     -webkit-touch-callout: none;
     /* Disable callout on long-press (iOS Safari) */
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden; /* Hides horizontal scrollbar */
 }
 
 /* Optional: Disable dragging of images */
