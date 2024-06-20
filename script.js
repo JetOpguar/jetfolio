@@ -1,4 +1,83 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('.section');
 
+    function checkScroll() {
+        const scrollY = window.scrollY || window.pageYOffset;
+
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            // Calculate the bottom of the section
+            const sectionBottom = sectionTop + sectionHeight;
+
+            // Determine if the section is in the viewport vertically
+            const isVisible = scrollY > sectionTop - window.innerHeight + sectionHeight / 3.4 &&
+                              scrollY < sectionBottom - sectionHeight / 2.4;
+
+            if (index === 0) {
+                // Special handling for the first section
+                if (scrollY < sectionBottom - sectionHeight / 2.4) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            } else {
+                // For other sections
+                if (isVisible) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            }
+        });
+    }
+
+    // Function to scroll to the first section on page load
+    function scrollToFirstSection() {
+        const firstSection = sections[0];
+        const sectionTop = firstSection.offsetTop;
+        window.scrollTo({
+            top: sectionTop,
+            behavior: 'smooth'
+        });
+    }
+
+    // Initial scroll to the first section
+    scrollToFirstSection();
+
+    window.addEventListener('scroll', checkScroll);
+    window.addEventListener('resize', checkScroll);
+
+    // Check on page load after scrolling
+    window.addEventListener('scroll', function onFirstScroll() {
+        window.removeEventListener('scroll', onFirstScroll);
+        checkScroll();
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.section');
+
+    const options = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     // Function to hide the loader and show the content once loaded

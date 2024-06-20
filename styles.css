@@ -361,6 +361,7 @@ section {
     margin: 0 auto;
 }
 
+
 /* Example for #about section */
 /* Adjustments for About Me section */
 #about .about-content {
@@ -623,6 +624,16 @@ footer p {
     background-color: #1abc9c;
     border-radius: 50%;
 }
+.section {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.section.active {
+    opacity: 1; /* Fully visible when active */
+}
+
+
 
 .timeline-content {
     padding: 20px;
@@ -928,6 +939,7 @@ label {
 body {
         overflow-x: hidden;
     }
+    
     /* Adjustments for header */
     .header {
         flex-direction: column;
@@ -979,35 +991,41 @@ body {
         margin: 20px 10px;
         padding: 20px;
     }
-
+    @media only screen and (max-width: 768px) {
     /* Adjustments for intro section */
     .intro {
+        display: flex;
         flex-direction: column;
+        align-items: center; /* Center items horizontally */
         margin-top: 10px;
+        text-align: center; /* Center text within intro */
     }
-
+    
     .intro img {
         width: 100px;
         height: 100px;
+        margin-bottom: 10px; /* Optional: Add margin below the image */
     }
-
+    
     .intro-text {
         text-align: center;
     }
-
+    
     .intro-text h1 {
         font-size: 2em;
+        margin-bottom: 0; /* Remove default margin bottom */
     }
+    
     #specialization {
-        text-align: left;
+        text-align: center; /* Center align the specialization text */
     }
     
     #specialization h2 {
-        margin-left: 30px;
-        margin-top: -1%;
+        margin-top: 10px; /* Adjust spacing as needed */
         font-size: 0.9em;
         color: #333;
         /* Default text color */
+        white-space: nowrap; /* Prevent text from wrapping */
     }
     
     #specialization #typing-text {
@@ -1020,7 +1038,7 @@ body {
     #specialization #prefix {
         color: #555;
         /* Color for the prefix text */
-    }    
+    }
     
 
     /* Adjustments for skills section */
@@ -1072,13 +1090,13 @@ body {
     }
 
     #about img {
-        width: 350px; /* Set fixed width for square shape */
-        height: 350px; /* Set fixed height for square shape */
+        width: 290px; /* Set fixed width for square shape */
+        height: 290px; /* Set fixed height for square shape */
         margin-top: 0px; /* Space between text and image */
         border-radius: 8px; /* Keep rounded corners */
         object-fit: cover;
         box-shadow: 0 4px 6px rgba(24, 23, 23, 0.171);
-        border: 4px solid #fff; /* Add a minimalistic border */
+        border: 1px solid #fff; /* Add a minimalistic border */
     }
 
     #about .about-right {
@@ -1119,8 +1137,8 @@ body {
     }
 
     .intro img {
-        width: 380px; /* Increase width */
-        height: 380px; /* Increase height */
+        width: 280px; /* Increase width */
+        height: 280px; /* Increase height */
     }
 
     #projects {
@@ -1226,4 +1244,20 @@ body {
     button:hover {
         background-color: #5a5454; /* Darker green on hover */
     }
+}
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media screen and (max-width: 767px) {
+    footer {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
 }
