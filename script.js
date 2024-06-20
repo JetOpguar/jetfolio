@@ -1,3 +1,7 @@
+// Disable right-click context menu
+document.addEventListener('contextmenu', function (event) {
+    event.preventDefault();
+});
 
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.section');
