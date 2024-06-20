@@ -1,7 +1,19 @@
+window.onload = function() {
+    // Calculate the horizontal scroll position to center the content
+    var viewportWidth = window.innerWidth; // Viewport width
+    var contentWidth = document.body.scrollWidth; // Total content width
+
+    var scrollX = (contentWidth - viewportWidth) / 2; // Calculate center position
+
+    // Use window.scroll to set the scroll position
+    window.scroll(scrollX, 0); // Scroll horizontally to the calculated position
+};
+
 // Disable right-click context menu
 document.addEventListener('contextmenu', function (event) {
     event.preventDefault();
 });
+
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.section');
 
@@ -37,14 +49,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Function to scroll to the first section on page load
+    // Function to scroll to the first section
     function scrollToFirstSection() {
         const firstSection = sections[0];
-        const sectionTop = firstSection.offsetTop;
-        window.scrollTo({
-            top: sectionTop,
-            behavior: 'smooth'
-        });
+        if (firstSection) {
+            const sectionTop = firstSection.offsetTop;
+            window.scrollTo({
+                top: sectionTop,
+                behavior: 'smooth' // Optional: smooth scrolling
+            });
+        }
     }
 
     // Initial scroll to the first section
@@ -59,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         checkScroll();
     });
 });
+
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.section');
 
