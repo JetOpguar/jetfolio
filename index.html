@@ -237,34 +237,33 @@
         </section>
 
         <br>
-        <div id="contacts" class="section" class="contacts" >
-            <div class="contacts">
-                <div class="form-container">
-                    <div class="left-container">
-                        <div class="left-inner-container">
-                            <h2 style="font-size: 2.2em; color: aliceblue;">Let's Chat</h2>
-                            <p>Whether you have a question, want to start a project, or simply want to connect,</p>
-                            <br>
-                            <p>Feel free to send me a message in the contact form</p>
-                        </div>
+        <div id="contacts" class="section">
+            <div class="form-container">
+                <div class="left-container">
+                    <div class="left-inner-container">
+                        <h2 style="font-size: 2.2em; color: aliceblue;">Let's Chat</h2>
+                        <p>Whether you have a question, want to start a project, or simply want to connect,</p>
+                        <br>
+                        <p>Feel free to send me a message in the contact form</p>
                     </div>
-                    <div class="right-container">
-                        <div class="right-inner-container">
-                            <form id="contact-form" netlify>
-                                <h1 style="font-size: 2.2em" class="lg-view">CONTACT ME</h1>
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea>
-                                <button type="submit" id="submit-btn">Submit</button>
-                            </form>
-                        </div>
+                </div>
+                <div class="right-container">
+                    <div class="right-inner-container">
+                        <form id="contact-form" method="POST" netlify>
+                            <h1 style="font-size: 2.2em" class="lg-view">CONTACT ME</h1>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea>
+                            <button type="submit" id="submit-btn">Submit</button>
+                        </form>
                     </div>
-
                 </div>
             </div>
+        </div>
+        
 
     </main>
 
