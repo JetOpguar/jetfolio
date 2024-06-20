@@ -2,7 +2,6 @@
 document.addEventListener('contextmenu', function (event) {
     event.preventDefault();
 });
-
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.section');
 
@@ -60,8 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
         checkScroll();
     });
 });
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.section');
 

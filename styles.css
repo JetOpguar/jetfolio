@@ -1302,6 +1302,13 @@ body {
     transform: translateY(0);
   }
   @media screen and (max-width: 767px) {
+    #about p{
+        text-align: left;
+    }
+    .cv-download{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
     footer {
         padding: 10px; /* Adjust padding for smaller screens */
     }
