@@ -142,31 +142,33 @@ document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contact-form');
 
     contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent default form submission
 
         let name = document.getElementById('name').value;
         let email = document.getElementById('email').value;
         let message = document.getElementById('message').value;
 
         if (!name || !email || !message) {
+            // Display error message if required fields are not filled
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Please fill in all required fields!',
             });
         } else {
-            // Simulating form submission (replace with actual form submission code)
+            // Simulate form submission success
             setTimeout(() => {
                 Swal.fire({
                     icon: 'success',
                     title: 'Success!',
                     text: 'Your message has been sent successfully.',
                 });
-                contactForm.reset();
+                contactForm.reset(); // Reset form after successful submission
             }, 1000);
         }
     });
 });
+
 
 
 // Smooth scroll to top function
