@@ -939,7 +939,10 @@ label {
 body {
         overflow-x: hidden;
     }
-    
+    #home {
+        padding: 20px 20px;
+        text-align: center;
+    }
     /* Adjustments for header */
     .header {
         flex-direction: column;
@@ -1260,4 +1263,46 @@ body {
         padding: 10px; /* Adjust padding for smaller screens */
     }
 }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1280px) {
+    .icons {
+        position: absolute;
+        margin-left: 85px;
+        bottom: 340px;
+        /* Adjust distance from the bottom */
+        left: 51.6%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .icons a {
+        display: inline-block;
+        margin: 0 10px;
+        width: 40px;
+        /* Adjust the width of icons */
+        height: -400px;
+        /* Adjust the height of icons */
+        transition: transform 0.3s ease;
+        /* Smooth transition effect */
+    }
+    
+    .icons a img {
+        width: 100%;
+        /* Ensure image takes full width of parent container */
+        height: 100%;
+        /* Ensure image takes full height of parent container */
+        object-fit: contain;
+        /* Maintain aspect ratio and fit inside the dimensions */
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        /* Smooth transition effect */
+    }
+    
+    .icons a:hover img {
+        transform: scale(1.1);
+        /* Smooth zoom effect on hover */
+    }
 }
