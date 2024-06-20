@@ -138,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", navHighlighter);
 });
 
-// Form submission handling
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contact-form');
 
@@ -168,6 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
 
 // Smooth scroll to top function
 function scrollToTop() {
