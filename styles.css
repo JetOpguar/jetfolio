@@ -289,12 +289,12 @@ main {
 
 section {
     background: white;
-    margin: 40px;
+    margin: 80px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: center;
-    min-height: 70vh;
+    min-height: 50vh;
     /* Ensure each section fills the entire viewport height */
     display: flex;
     flex-direction: column;
@@ -562,9 +562,9 @@ footer p {
 .icons {
     position: absolute;
     margin-left: 60px;
-    bottom: 110px;
+    bottom: 380px;
     /* Adjust distance from the bottom */
-    left: 52%;
+    left: 51%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
