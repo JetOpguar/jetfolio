@@ -294,7 +294,7 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: center;
-    min-height: 70vh;
+    min-height: 65vh;
     /* Ensure each section fills the entire viewport height */
     display: flex;
     flex-direction: column;
@@ -624,7 +624,7 @@ footer p {
     left: 0;
     width: 20px;
     height: 20px;
-    background-color: #1abc9c;
+    background-color: #2c3e50;
     border-radius: 50%;
 }
 .section {
@@ -665,7 +665,7 @@ footer p {
     left: 10px;
     width: 2px;
     height: 100%;
-    background: #1abc9c;
+    background: #808080;
 }
 
 h2 {
@@ -1356,5 +1356,64 @@ label {
     .icons a:hover img {
         transform: scale(1.1);
         /* Smooth zoom effect on hover */
+    }
+}
+@media only screen and (min-width: 1080px) and (max-width: 1920px) {
+    .icons {
+        position: absolute;
+        margin-left: 85px;
+        bottom: 240px;
+        /* Adjust distance from the bottom */
+        left: 53.7%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .icons a {
+        display: inline-block;
+        margin: 0 10px;
+        width: 40px;
+        /* Adjust the width of icons */
+        height: -400px;
+        /* Adjust the height of icons */
+        transition: transform 0.3s ease;
+        /* Smooth transition effect */
+    }
+    
+    .icons a img {
+        width: 110%;
+        /* Ensure image takes full width of parent container */
+        height: 110%;
+        /* Ensure image takes full height of parent container */
+        object-fit: contain;
+        /* Maintain aspect ratio and fit inside the dimensions */
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        /* Smooth transition effect */
+    }
+    
+    .icons a:hover img {
+        transform: scale(1.1);
+        /* Smooth zoom effect on hover */
+    }
+    .intro img {
+        margin-top: 45px;
+        width: 480px; /* Increase width */
+        height: 480px; /* Increase height */
+    }
+    section {
+        background: white;
+        margin: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        text-align: center;
+        min-height: 65vh;
+        /* Ensure each section fills the entire viewport height */
+        display: flex;
+        flex-direction: column;
     }
 }
