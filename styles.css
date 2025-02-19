@@ -955,12 +955,12 @@ label {
     font-family: 'Poppins', sans-serif;
 }
 /* Media query for Android browsers */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
 body {
         overflow-x: hidden;
     }
     #home {
-        padding: 20px;
+        padding: 20px 20px;
         text-align: center;
     }
     /* Adjustments for header */
@@ -1014,7 +1014,7 @@ body {
         margin: 20px 10px;
         padding: 20px;
     }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 768px) {
     /* Adjustments for intro section */
     .intro {
         display: flex;
