@@ -9,11 +9,6 @@ window.onload = function() {
     window.scroll(scrollX, 0); // Scroll horizontally to the calculated position
 };
 
-// Disable right-click context menu
-document.addEventListener('contextmenu', function (event) {
-    event.preventDefault();
-});
-
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.section');
 
