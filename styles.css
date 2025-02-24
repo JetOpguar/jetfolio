@@ -50,7 +50,7 @@ img {
 }
 
 .loader {
-    border: 8px solid #2c3e50;
+    border: 8px solid #484949;
     /* Blue color */
     border-radius: 50%;
     border-top: 8px solid rgba(0, 0, 0, 0.3);
@@ -75,7 +75,7 @@ img {
     font-family: 'Poppins', sans-serif;
     font-size: 2.1em;
     font-weight: bold;
-    color: #333;
+    color: black;
     text-align: center;
     opacity: 0;
     transform: translateY(20px);
@@ -168,7 +168,7 @@ a:hover {
 }
 
 header {
-    background-color: #2c3e50;
+    background-color: #494848;
     color: white;
     padding: 5px 0;
     text-align: center;
@@ -220,7 +220,7 @@ header {
 }
 
 .header-right a.active {
-    color: #1abc9c;
+    color: #a39c9c;
     /* Adjust the active link color */
 }
 
@@ -273,7 +273,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #1abc9c;
+    color: #a39c9c;
 }
 
 main {
@@ -307,13 +307,13 @@ section {
 #specialization h2 {
     margin-top: -1%;
     font-size: 1.5em;
-    color: #333;
+    color: black;
     /* Default text color */
 }
 
 #specialization #typing-text {
     display: inline-block;
-    color: #1abc9c;
+    color: #31363F;
     /* Color for the typing effect text */
     font-weight: bold;
 }
@@ -378,6 +378,7 @@ section {
 
 #about .about-right {
     flex: 2;
+    margin-top: -55px;
 }
 
 #about img {
@@ -396,7 +397,7 @@ section {
 #about h3 {
     font-size: 24px;
     margin-top: 0;
-    color: #2c3e50;
+    color: black;
 }
 
 #about p {
@@ -410,7 +411,7 @@ section {
 }
 
 .cv-download button {
-    background-color: #2c3e50;
+    background-color: #494848;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -421,7 +422,7 @@ section {
 }
 
 .cv-download button:hover {
-    background-color: #1abc9c;
+    background-color: #a39c9c;
     transform: translateY(-2px);
 }
 
@@ -439,7 +440,7 @@ section {
 
 #education h3 {
     margin: 0 0 5px;
-    color: #2c3e50;
+    color: #484949;
 }
 
 #education p {
@@ -482,7 +483,7 @@ form textarea {
 }
 
 button {
-    background-color: #2c3e50;
+    background-color: #a39c9c;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -493,12 +494,12 @@ button {
 }
 
 button:hover {
-    background-color: #1abc9c;
+    background-color: #494848;
     transform: translateY(-2px);
 }
 
 footer {
-    background-color: #2c3e50;
+    background-color: #494848;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -624,7 +625,7 @@ footer p {
     left: 0;
     width: 20px;
     height: 20px;
-    background-color: #2c3e50;
+    background-color: #484949;
     border-radius: 50%;
 }
 .section {
@@ -648,7 +649,7 @@ footer p {
 
 .timeline-content h3 {
     margin-top: 0;
-    color: #2c3e50;
+    color: #a39c9c;
 }
 
 .timeline-content p {
@@ -661,11 +662,11 @@ footer p {
 .timeline:before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 104px;
     left: 10px;
     width: 2px;
-    height: 100%;
-    background: #808080;
+    height: 84%;
+    background: #a39c9c;
 }
 
 h2 {
@@ -686,7 +687,7 @@ h2 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #1abc9c;
+    background-color: #484949;
     color: white;
     border: none;
     border-radius: 50%;
@@ -705,7 +706,7 @@ h2 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #1abc9c;
+    background-color: #484949;
     color: white;
     border: none;
     border-radius: 50%;
@@ -719,7 +720,7 @@ h2 {
 }
 
 #scrollToTopBtn:hover {
-    background-color: #16a085;
+    background-color: #a39c9c;
     transform: scale(1.1);
     /* Scale up on hover for a slight animation */
 }
@@ -754,25 +755,25 @@ h2 {
 #education h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
-    color: #333;
+    color: black;
     /* Darker color for the heading */
 }
 #about h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
-    color: #333;
+    color: black;
     /* Darker color for the heading */
 }
 #skills h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
-    color: #333;
+    color: black;
     /* Darker color for the heading */
 }
 #projects h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
-    color: #333;
+    color: black;
     /* Darker color for the heading */
 }
 
@@ -789,7 +790,7 @@ h2 {
 }
 
 .project {
-    background-color: #2c3e50;
+    background-color: #484949;
     ;
     /* White background for each project */
     border-radius: 8px;
@@ -866,7 +867,7 @@ h2 {
     flex: 1;
     /* Take up remaining space */
     padding: 40px;
-    background-color: #2c3e50;
+    background-color: #484949;
     /* Green background */
     color: #fff;
     /* White text color */
@@ -932,7 +933,7 @@ textarea {
 
 /* Submit button */
 button {
-    background-color: #2c3e50;
+    background-color: #484949;
     /* Green background */
     color: #fff;
     /* White text color */
@@ -944,7 +945,7 @@ button {
 }
 
 button:hover {
-    background-color: #5a5454;
+    background-color: #a39c9c;
     /* Darker green on hover */
 }
 
@@ -1048,14 +1049,14 @@ label {
     #specialization h2 {
         margin-top: 10px; /* Adjust spacing as needed */
         font-size: 0.9em;
-        color: #333;
+        color: black;
         /* Default text color */
         white-space: nowrap; /* Prevent text from wrapping */
     }
     
     #specialization #typing-text {
         display: inline-block;
-        color: #1abc9c;
+        color: #31363F;
         /* Color for the typing effect text */
         font-weight: bold;
     }
@@ -1111,7 +1112,7 @@ label {
     }
 
     #about .about-left {
-        margin-bottom: -75px; /* Adjust spacing between image and text */
+        margin-bottom: -38px;
     }
 
     #about img {
@@ -1131,7 +1132,7 @@ label {
     #about h3 {
         font-size: 20px; /* Decrease heading size for better readability */
         margin-bottom: 5px; /* Adjust spacing below the heading */
-        color: #2c3e50; /* Ensure text color is defined */
+        color: #484949; /* Ensure text color is defined */
     }
 
     #about p {
@@ -1148,7 +1149,7 @@ label {
     .cv-download button {
         padding: 8px 16px; /* Adjust button padding */
         font-size: 0.9em; /* Decrease button font size */
-        background-color: #2c3e50; /* Button background color */
+        background-color: #494848; /* Button background color */
         color: #fff; /* Button text color */
         border: none; /* Remove button border */
         border-radius: 4px; /* Add button border radius */
@@ -1157,7 +1158,7 @@ label {
     }
 
     .cv-download button:hover {
-        background-color: #1abc9c; /* Hover background color */
+        background-color: #ffffff; /* Hover background color */
         transform: translateY(-2px);
     }
 
@@ -1182,29 +1183,35 @@ label {
     }
 }
 @media only screen and (max-width: 768px) {
+    .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 28px 0;
+    }
     /* Adjustments for contact section on Android devices */
     #education h2 {
         font-size: 1.5em;
         margin-bottom: 20px;
-        color: #333;
+        color: black;
         /* Darker color for the heading */
     }
     #about h2 {
         font-size: 1.5em;
         margin-bottom: 20px;
-        color: #333;
+        color: black;
         /* Darker color for the heading */
     }
     #skills h2 {
         font-size: 1.5em;
         margin-bottom: 20px;
-        color: #333;
+        color: black;
         /* Darker color for the heading */
     }
     #projects h2 {
         font-size: 1.5em;
         margin-bottom: 20px;
-        color: #333;
+        color: black;
         /* Darker color for the heading */
     }
     .contacts {
@@ -1225,7 +1232,7 @@ label {
     .left-container {
         flex: 1; /* Take up remaining space */
         padding: 20px; /* Reduce padding */
-        background-color: #2c3e50; /* Darker background */
+        background-color: #484949; /* Darker background */
         color: #fff; /* White text color */
         border-top-left-radius: 8px; /* Rounded corners for top left */
         border-bottom-left-radius: 8px; /* Rounded corners for bottom left */
@@ -1281,7 +1288,7 @@ label {
     button {
         padding: 12px 20px; /* Adjust button padding */
         font-size: 16px; /* Maintain font size */
-        background-color: #2c3e50; /* Green background */
+        background-color: #494848; /* Green background */
         color: #fff; /* White text color */
         border: none; /* Remove default button border */
         border-radius: 4px; /* Rounded corners */

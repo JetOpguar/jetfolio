@@ -202,8 +202,8 @@ window.addEventListener('scroll', function() {
 // Typing animation initialization
 document.addEventListener('DOMContentLoaded', function () {
     const typingText = document.getElementById('typing-text');
-    const words = ['Web Designing', 'Front-End Development']; // Add more words as needed
-    let wordIndex = 0;
+    const words = ['Web Designing', 'Front-End Development', 'Digital Marketing', 'Visual Editor']; // Add more words as needed
+    let wordIndex = 0; 
     let charIndex = 0;
     let typingTimer;
 
