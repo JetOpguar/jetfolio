@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Simulate a delay (e.g., fetching data or loading resources)
-    setTimeout(showContent, 100); // Loader will disappear after 5 seconds (5000 milliseconds)
+    setTimeout(showContent, 4000); // Loader will disappear after 5 seconds (5000 milliseconds)
 });
 
 // Highlight active section in navbar on scroll
@@ -251,4 +251,18 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+});
+document.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+});
+
+document.addEventListener("keydown", function(event) {
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    if (
+        event.key === "F12" || 
+        (event.ctrlKey && event.shiftKey && (event.key === "I" || event.key === "J")) || 
+        (event.ctrlKey && event.key === "U")
+    ) {
+        event.preventDefault();
+    }
 });
