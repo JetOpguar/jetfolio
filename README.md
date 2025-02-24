@@ -7,7 +7,6 @@ JetFolio is my personal portfolio website built using **HTML, CSS, and JavaScrip
 - **Smooth Animations** – Interactive and visually appealing effects
 - **Dynamic Content** – JavaScript-powered components for enhanced user experience
 - **Contact Form** – Easy way for visitors to reach out
-- **SEO Optimized** – Structured for better search engine visibility
 
 ## Technologies Used
 - **HTML** – Markup structure
@@ -31,10 +30,10 @@ JetFolio is my personal portfolio website built using **HTML, CSS, and JavaScrip
 - Integrate a CMS for easier content updates
 
 ## Connect with Me
-- **Portfolio:** [Your Website URL]
-- **LinkedIn:** [Your LinkedIn Profile]
-- **GitHub:** [Your GitHub Profile]
-- **Email:** [Your Email Address]
+- **Portfolio:** https://bjopgr.netlify.app/
+- **LinkedIn:** https://linkedin.com/in/jetro-opguar
+- **GitHub:** https://github.com/JetOpguar
+- **Email:** benchjetro@gmail.com
 
 Feel free to fork, contribute, or reach out if you have any suggestions!
 
