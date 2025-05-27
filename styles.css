@@ -168,7 +168,7 @@ a:hover {
 }
 
 header {
-    background-color: #494848;
+    background: linear-gradient(135deg, #494848, #000000);
     color: white;
     padding: 5px 0;
     text-align: center;
@@ -324,7 +324,7 @@ section {
 
 /* Home section */
 #home {
-    padding: 60px 20px;
+    padding: 140px 50px;
     text-align: center;
 }
 
@@ -427,6 +427,34 @@ section {
 
 
 /* Example for #education section */
+#work{
+    text-align: center;
+    padding: 5px 1px;
+    background-color: #ffffff;
+    /* Light background color for the section */
+    margin-top: 10px;
+}
+#work .education-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#work .education-item {
+    margin-bottom: 20px;
+}
+
+#work h3 {
+    margin: 0 0 5px;
+    color: #484949;
+}
+
+#work p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
 #education .education-content {
     display: flex;
     flex-direction: column;
@@ -498,18 +526,122 @@ button:hover {
 }
 
 footer {
-    background-color: #494848;
-    color: white;
+    background-color: #111;
+    color: #fff;
+    padding: 30px 10px 10px;
+    font-family: "Poppins" sans-serif;
+    font-size: 14px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 10px;
+  }
+  
+  .footer-left {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-logo {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .logo-symbols {
+    font-size: 20px;
+  }
+  
+  .footer-socials {
+    margin-top: 10px;
+  }
+  
+  .footer-socials a {
+    margin-right: 10px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 26px;
+  }
+  
+  .footer-socials a:hover {
+    color: #fff;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    color: #fff;
+  }
+  
+  footer > p {
     text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    margin-top: 40px;
-    /* Adds spacing between the content and footer */
-}
-
-footer p {
-    margin: 0;
-}
+    margin-top: 30px;
+    color: #666;
+    font-size: 13px;
+  }
+  .footer-bottom {
+    border-top: 1px solid #ffffff1a;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #ccc;
+  }
+  
+  
+  @media (max-width: 600px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-left,
+    .footer-links {
+      min-width: unset;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    .footer-logo {
+      font-size: 2.5em;
+    }
+  
+    .footer-socials a {
+      font-size: 20px;
+      margin: 0 8px;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .footer-links a {
+      display: block;
+    }
+  
+    .footer-bottom {
+      font-size: 12px;
+    }
+  }
+  
 
 /* Responsive Design */
 /* Styles for minimalistic skill items with icons */
@@ -562,9 +694,8 @@ footer p {
 .icons {
     position: absolute;
     margin-left: 60px;
-    bottom: 110px;
-    /* Adjust distance from the bottom */
     left: 52%;
+    bottom: 169px;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
@@ -599,7 +730,48 @@ footer p {
     transform: scale(1.1);
     /* Smooth zoom effect on hover */
 }
-
+@media screen and (width: 1980px) and (height: 1080px) {
+   .icons {
+        position: absolute;
+        margin-left: 85px;
+        bottom: 20px;
+        /* Adjust distance from the bottom */
+        left: 53.7%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .icons a {
+        display: inline-block;
+        margin: 0 10px;
+        width: 40px;
+        /* Adjust the width of icons */
+        height: -400px;
+        /* Adjust the height of icons */
+        transition: transform 0.3s ease;
+        /* Smooth transition effect */
+    }
+    
+    .icons a img {
+        width: 110%;
+        /* Ensure image takes full width of parent container */
+        height: 110%;
+        /* Ensure image takes full height of parent container */
+        object-fit: contain;
+        /* Maintain aspect ratio and fit inside the dimensions */
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        /* Smooth transition effect */
+    }
+    
+    .icons a:hover img {
+        transform: scale(1.1);
+        /* Smooth zoom effect on hover */
+    }
+}
 /* Timeline Styles */
 
 .timeline {
@@ -758,6 +930,12 @@ h2 {
     color: black;
     /* Darker color for the heading */
 }
+#work h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: black;
+    /* Darker color for the heading */
+}
 #about h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
@@ -790,7 +968,7 @@ h2 {
 }
 
 .project {
-    background-color: #484949;
+    background: linear-gradient(135deg, #494848, #000000);
     ;
     /* White background for each project */
     border-radius: 8px;
@@ -867,7 +1045,7 @@ h2 {
     flex: 1;
     /* Take up remaining space */
     padding: 40px;
-    background-color: #484949;
+    background: linear-gradient(135deg, #494848, #000000);
     /* Green background */
     color: #fff;
     /* White text color */
@@ -1190,6 +1368,12 @@ label {
         color: black;
         /* Darker color for the heading */
     }
+    #work h2 {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+        color: black;
+        /* Darker color for the heading */
+    }
     #about h2 {
         font-size: 2.2em;
         margin-bottom: 20px;
@@ -1312,18 +1496,17 @@ label {
         margin-top: 15px;
         margin-bottom: 15px;
     }
-    footer {
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
+
 }
 
-@media only screen and (min-width: 1000px) and (max-width: 1280px) {
+@media only screen and (min-width: 800px) and (max-width: 1280px) {
+    
     .icons {
         position: absolute;
         margin-left: 85px;
-        bottom: 340px;
+        bottom: 170px;
         /* Adjust distance from the bottom */
-        left: 51.6%;
+        left: 50.6%;
         transform: translateX(-50%);
         display: flex;
         justify-content: center;
@@ -1358,27 +1541,24 @@ label {
         transform: scale(1.1);
         /* Smooth zoom effect on hover */
     }
+    .exp-timeline:before {
+    content: '';
+    position: absolute;
+    top: 79px;
+    left: 10px;
+    width: 2px;
+    height: 76%;
+    background: #a39c9c;
 }
-@media only screen and (min-width: 1080px) and (max-width: 1920px) {
-    .icons {
-        position: absolute;
-        margin-left: 85px;
-        bottom: 240px;
-        /* Adjust distance from the bottom */
-        left: 53.7%;
-        transform: translateX(-50%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
+}
+@media screen and (width: 1980px) and (height: 1080px) {
     
     .icons a {
         display: inline-block;
         margin: 0 10px;
         width: 40px;
         /* Adjust the width of icons */
-        height: -400px;
+        height: 100px;
         /* Adjust the height of icons */
         transition: transform 0.3s ease;
         /* Smooth transition effect */
@@ -1417,6 +1597,7 @@ label {
         display: flex;
         flex-direction: column;
     }
+    
 }
 .exp-timeline {
     position: relative;
@@ -1462,7 +1643,7 @@ label {
 .exp-timeline:before {
     content: '';
     position: absolute;
-    top: 106px;
+    top: 110px;
     left: 10px;
     width: 2px;
     height: 80%;
@@ -1473,6 +1654,18 @@ label {
     padding-left: 40px;
     margin-bottom: 30px;
 }
+@media screen and (width: 1280px) and (height: 800px) {
+  .exp-timeline:before {
+    content: '';
+    position: absolute;
+    top: 108px;
+    left: 10px;
+    width: 2px;
+    height: 68%;
+    background: #a39c9c;
+  }
+}
+
 @media (max-width: 768px) {
     .exp-timeline {
         position: relative;
@@ -1505,12 +1698,14 @@ label {
     
     .exp-timeline-content h3 {
         margin-top: 0;
-        color: #a39c9c;
+        color: #000000;
     }
     
     .exp-timeline-content p {
         margin: 0;
-        font-size: 1em;
+        color: #484949; 
+        font-size: 17px; 
+        font-weight: bold; 
         line-height: 1.5;
     }
     
@@ -1575,17 +1770,6 @@ label {
     margin: 0;
     font-size: 1em;
     line-height: 1.5;
-}
-
-/* Add a vertical line */
-.timeline:before {
-    content: '';
-    position: absolute;
-    top: 117px;
-    left: 10px;
-    width: 2px;
-    height: 88%;
-    background: #a39c9c;
 }
 
 }
