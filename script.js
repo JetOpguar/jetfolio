@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Simulate a delay (e.g., fetching data or loading resources)
-    setTimeout(showContent, 100); // Loader will disappear after 5 seconds (5000 milliseconds)
+    setTimeout(showContent, 5000); // Loader will disappear after 5 seconds (5000 milliseconds)
 });
 
 // Highlight active section in navbar on scroll
@@ -263,3 +263,28 @@ document.addEventListener("keydown", function(event) {
         event.preventDefault();
     }
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll("a.scroll");
+
+    navLinks.forEach(function(navLink) {
+        navLink.addEventListener("click", function(event) {
+            event.preventDefault();
+            const targetId = navLink.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+                const sectionTop = targetSection.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+                window.scrollTo({
+                    top: sectionTop,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
