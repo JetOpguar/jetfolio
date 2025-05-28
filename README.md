@@ -12,11 +12,6 @@ I'm a passionate web developer who enjoys building sleek, user-friendly interfac
 
 This project is personal, but feel free to fork it or use it as inspiration for your own portfolio. If you have suggestions or feedback, I’d love to hear from you!
 
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-Thanks for visiting my repo! ⭐ it if you like Jetfolio and want to support my work.
 
 ---
 
@@ -57,3 +52,10 @@ cd jetfolio
 
 # Open in your default browser (or open index.html manually)
 start index.html
+```
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+Thanks for visiting my repo! ⭐ it if you like Jetfolio and want to support my work.
