@@ -50,7 +50,7 @@ To run this project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/jetfolio.git
+git clone https://github.com/JetOpguar/jetfolio.git
 
 # Navigate to the project folder
 cd jetfolio
