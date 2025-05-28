@@ -39,7 +39,10 @@ Check out the live version here: [bjopgr.netlify.app](https://bjopgr.netlify.app
 
 ## 📸 Screenshots
 
-_Add a few screenshots here to showcase your design (optional)_
+![image](https://github.com/user-attachments/assets/a13356ac-79d0-4509-b8d8-996b56ca0370)
+![image](https://github.com/user-attachments/assets/2d0018fd-c7bb-4258-a4e9-27cfb83c4d24)
+![image](https://github.com/user-attachments/assets/aae44a0e-41b0-47e2-ab17-3f994221eeb2)
+
 
 ## 📦 Installation
 
