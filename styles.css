@@ -1,4 +1,5 @@
 /* Disable text selection and dragging */
+
 body {
     user-select: none;
     /* Prevent text selection */
@@ -617,6 +618,33 @@ footer {
     font-size: 13px;
     color: #ccc;
   }
+  .footer-links a {
+  position: relative;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #ccc;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
   
   
  @media (max-width: 600px) {
@@ -709,7 +737,7 @@ footer {
 .icons {
     position: absolute;
     margin-left: 60px;
-    left: 52%;
+    left: 55%;
     bottom: 169px;
     transform: translateX(-50%);
     display: flex;
@@ -1522,7 +1550,7 @@ label {
         margin-left: 85px;
         bottom: 170px;
         /* Adjust distance from the bottom */
-        left: 50.6%;
+        left: 53%;
         transform: translateX(-50%);
         display: flex;
         justify-content: center;
