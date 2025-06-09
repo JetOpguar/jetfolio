@@ -154,33 +154,58 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contact-form');
 
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Stop the browser's default form submission
 
-        let name = document.getElementById('name').value;
-        let email = document.getElementById('email').value;
-        let message = document.getElementById('message').value;
+        let name = document.getElementById('name').value.trim();
+        let email = document.getElementById('email').value.trim();
+        let message = document.getElementById('message').value.trim();
 
         if (!name || !email || !message) {
-            // Display error message if required fields are not filled
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Please fill in all required fields!',
             });
-        } else {
-            // Simulate form submission success
-            setTimeout(() => {
+            return;
+        }
+
+        // Create FormData and send with fetch to Formspree
+        const formData = new FormData(contactForm);
+
+        fetch('https://formspree.io/f/mvgrkkao', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
                 Swal.fire({
                     icon: 'success',
                     title: 'Success!',
                     text: 'Your message has been sent successfully.',
                 });
-                contactForm.reset(); // Reset form after successful submission
-            }, 1000);
-        }
+                contactForm.reset();
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'There was a problem submitting the form.',
+                });
+            }
+        })
+        .catch(error => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Something went wrong. Please try again later.',
+            });
+        });
     });
 });
+
 
 
 

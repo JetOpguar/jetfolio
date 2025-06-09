@@ -277,6 +277,24 @@ Let’s connect and create something awesome together.</p>
                         style="margin-top: 10px; font-size: 1.2em; color: #000000; font-weight: bold; text-align: center;">
                         Lightroom</p>
                 </div>
+                <div class="skill-item">
+                    <img src="images/davinci.png" alt="DaVinci Resolve">
+                    <p
+                        style="margin-top: 10px; font-size: 1.2em; color: #000000; font-weight: bold; text-align: center;">
+                        DaVinci Resolve</p>
+                </div>
+                <div class="skill-item">
+                    <img src="images/filmora.png" alt="Filmora">
+                    <p
+                        style="margin-top: 10px; font-size: 1.2em; color: #000000; font-weight: bold; text-align: center;">
+                        Filmora</p>
+                </div>
+                <div class="skill-item">
+                    <img src="images/ganalytics.png" alt="Google Analytics">
+                    <p
+                        style="margin-top: 10px; font-size: 1.2em; color: #000000; font-weight: bold; text-align: center;">
+                        Google Analytics</p>
+                </div>
                 
                 <!-- Add skill items if more pa -->
             </div>
@@ -311,33 +329,36 @@ Let’s connect and create something awesome together.</p>
 <!--contak me-->
         <br>
         <div id="contacts" class="section">
-            <div class="form-container">
-                <div class="left-container">
-                    <div class="left-inner-container">
-                        <h2 style="font-size: 2.2em; color: rgb(255, 255, 255);">Let's Chat</h2>
-                        <p>Whether you have a question, want to start a project, or simply want to connect,</p>
-                        <br>
-                        <p>Feel free to send me a message in the contact form</p>
-                    </div>
-                </div>
-                <div class="right-container">
-                    <div class="right-inner-container">
-                        <form id="contact-form" method="POST" data-netlify="true">
-                            <input type="hidden" name="form-name" value="contact-form"> <!-- Hidden input for Netlify or something -->
-                            <h1 style="font-size: 2.2em" class="lg-view">CONTACT ME</h1>
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea>
-                            <button type="submit" id="submit-btn">Submit</button>
-                        </form>
-                    </div>
-                </div>
+    <div class="form-container">
+        <div class="left-container">
+            <div class="left-inner-container">
+                <h2 style="font-size: 2.2em; color: rgb(255, 255, 255);">Let's Chat</h2>
+                <p>Whether you have a question, want to start a project, or simply want to connect,</p>
+                <br>
+                <p>Feel free to send me a message in the contact form</p>
             </div>
         </div>
-        
+        <div class="right-container">
+            <div class="right-inner-container">
+                <form id="contact-form" action="https://formspree.io/f/mvgrkkao" method="POST">
+                    <h1 style="font-size: 2.2em" class="lg-view">CONTACT ME</h1>
+
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+
+                    <button type="submit" id="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
         
 
     </main>
@@ -368,7 +389,7 @@ Let’s connect and create something awesome together.</p>
         </div>
         <br>
         <div class="footer-bottom">
-            <p>&copy; 2025 Jetro Opguar. All rights reserved</p>
+            <p>&copy; Made with love by Jet </p>
           </div>
       </footer>
       
